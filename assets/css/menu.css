@@ -23,9 +23,9 @@ https://codepen.io/philhoyt/pen/ujHzd
     margin-top:15px
 }
 
-#primary_nav_wrap ul > li > a {
+#primary_nav_wrap > ul > li > a {
     pointer-events: none;
-    bakground-color: yellow;
+    background-color: yellow;
 }
 
 #primary_nav_wrap ul
