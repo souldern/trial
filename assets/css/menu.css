@@ -24,8 +24,8 @@ https://codepen.io/philhoyt/pen/ujHzd
 }
 
 #primary_nav_wrap > ul > li > a {
-    pointer-events: none;
-    background-color: yellow;
+    pointer-events: none !important;
+    background-color: yellow !important;
 }
 
 #primary_nav_wrap ul
