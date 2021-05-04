@@ -1,0 +1,8 @@
+span {margin-left:1em}
+
+
+@media screen and (max-width: 50em) {
+
+    span {width:100%; display:block; margin-top:.5em;}
+
+}

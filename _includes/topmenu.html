@@ -1,0 +1,205 @@
+{% assign menu_item = page.path | split:'/' | first%}
+
+{% if page.path  == 'home/menu.html' %}
+<nav id="menupage">
+  {% else %}
+<span data ="{{page.path}}" id="collapsed-menu"><a href="/home/menu">menu</a></span>
+<nav id="primary_nav_wrap">
+{% endif %}  
+ <ul class="flist">
+   <li
+     {% if menu_item == 'home' %}
+     class="current-menu-item"
+     {% endif %}
+     >
+   <a href="/">Home</a>
+   <ul class="flist">
+    <li><a href="/">Home</a></li>
+    <li><a href="/home/quiz">Souldern Quizzes</a></li>
+    <li><a href="/home/events">Village Events</a></li>
+    <li><a href="/home/announcements/soulderncarbootsales">Souldern Car Boot Sales</a></li>
+    <li><a href="/home/local-services">Local Services</a></li>
+    <li><a href="/home/defibrillator">Village Defibrillator</a></li>
+    <li><a href="/home/calendar">Calendar</a></li>
+    <li><a href="/home/announcements">Announcements</a></li>
+    <li><a href="/home/three-parishes">The Three Parishes</a></li>
+    <li><a href="/home/map">Map</a></li>
+    <li><a href="/home/street-view">Street View</a></li>
+    <li><a href="/home/gallery">Gallery</a></li>
+    <li><a href="/home/postcodes">Postcodes</a></li>
+    <li><a href="/home/houses">House Search</a></li>
+    <li><a href="/home/neighbouring-villages">Neighbouring Villages</a></li>
+    <li><a href="/home/contact-website">Contact Website</a></li>
+    <li><a href="/home/privacy-policy">Privacy Policy</a></li>
+    <li><a href="/home/about">About</a></li>
+   </ul>
+  </li>
+  <li
+     {% if menu_item == 'parish-council' %}
+     class="current-menu-item"
+     {% endif %}
+     >
+   <a href="/parish-council">Parish Council</a>
+   <ul class="flist">
+    <li><a href="/parish-council">Parish Council</a></li>
+    <li><a href="/parish-council/spc-agenda">SPC Agenda</a></li>
+    <li><a href="/parish-council/spc-minutes">SPC Minutes</a></li>
+    <li><a href="/parish-council/spc-documents">SPC Documents</a></li>
+    <li><a href="/parish-council/spc-newsletter">SPC Newsletter</a></li>
+    <li><a href="/parish-council/planning">Planning</a></li>
+    <li><a href="/parish-council/spc-members">SPC Members</a></li>
+    <li><a href="/parish-council/transparency">Transparency</a></li>
+    <li><a href="/home/privacy-policy">Privacy Policy</a></li>
+    <li><a href="/parish-council/welcome-packs">Welcome Packs</a></li>
+    <li><a href="/parish-council/vision-for-souldern">A Vision for Souldern</a></li>
+    <li><a href="/parish-council/cherwell-dc-and-mps">CDC and MPs</a></li>
+    <li><a href="/parish-council/fix-my-street">Fix My Street</a></li>
+   </ul>
+  </li>
+  <li
+     {% if menu_item == 'parish-church' %}
+     class="current-menu-item"
+     {% endif %}
+     >
+   <a href="/parish-church">Parish Church</a>
+   <ul class="flist">
+    <li><a href="/parish-church">Parish Church</a></li>
+    <li><a href="/church--chapel-sunday-school">Church &amp; Chapel Sunday School</a></li>
+    <li><a href="https://www.facebook.com/Souldern-Village-Church-Choir-305535326293896/">Church Choir (Facebook)</a></li>
+   </ul>
+  </li>
+  <li
+     {% if menu_item == 'chapel' %}
+     class="current-menu-item"
+     {% endif %}
+     >
+   <a href="/chapel">Wesleyan Chapel</a>
+   <ul class="flist">
+     <li><a href="/chapel">Wesleyan Chapel</a></li>
+     <li><a href="https://www.instagram.com/souldern_chapel/">Souldern Chapel (Instagram)</a></li>
+    <li><a href="/church--chapel-sunday-school">Church &amp; Chapel Sunday School</a></li>
+    <li><a href="/home/announcements/chapel-status">Suspension of Sunday Services</a></li>
+    <li><a href="/chapel/sunday-school">Sunday School 1869 – 2016</a></li>
+    <li><a href="/chapel/history-of-souldern-chapel">History of Souldern Chapel</a></li>
+    <li><a href="/chapel/sunday-school/memories-of-sunday-school">Memories of Sunday School</a></li>
+    <li><a href="/home/announcements/audreywestbury">Audrey Westbury</a></li>
+    <li><a href="/chapel/chapel-150">Chapel 150th Anniversary</a></li>
+   </ul>
+  </li>
+  <li
+     {% if menu_item == 'united-charity' %}
+     class="current-menu-item"
+     {% endif %}
+     >
+   <a href="/united-charity">United Charity</a>
+   <ul class="flist">
+    <li><a href="/united-charity">United Charity</a></li>
+   </ul>
+  </li>
+  <li
+     {% if menu_item == 'village-hall' %}
+     class="current-menu-item"
+     {% endif %}
+     >
+   <a href="/village-hall">Village Hall</a>
+   <ul class="flist">
+    <li><a href="/village-hall">Village Hall</a></li>
+    <li><a href="/village-hall/changing-room-plans">Changing Room Plans</a></li>
+    <li><a href="/village-hall/100-club">100 Club</a></li>
+   </ul>
+  </li>
+   <li
+     {% if menu_item == 'football-club' %}
+     class="current-menu-item"
+     {% endif %}
+     >
+     <a href="/football-club">Football</a>
+     <ul class="flist">
+       <li><a href="/football-club">Football</a></li>
+     </ul>
+   </li>
+    <li
+     {% if menu_item == 'horticultural-society' %}
+     class="current-menu-item"
+     {% endif %}
+     >
+   <a href="/horticultural-society">Horticultural Society</a>
+   <ul class="flist">
+    <li><a href="/horticultural-society">Horticultural Society</a></li>
+    <li><a href="/horticultural-society/SocietyContacts">Society Contacts</a></li>
+    <li><a href="/horticultural-society/WhatDoestheSocietyDo">What Does the Society Do?</a></li>
+    <li><a href="/horticultural-society/NewsandEvents">News and Events</a></li>
+    <li><a href="/horticultural-society/TheAnnualShow">The Annual Show</a></li>
+    <li><a href="/horticultural-society/Allotments">Allotments</a></li>
+    <li><a href="/horticultural-society/PhotoGallery">Photo Gallery</a></li>
+    <li><a href="/horticultural-society/Links">Links</a></li>
+    <li><a href="/horticultural-society/DocumentsforDownloading">Documents for Downloading</a></li>
+    <li><a href="/horticultural-society/HintsandTips">Hints and Tips</a></li>
+   </ul>
+  </li>
+  <li
+     {% if menu_item == 'the-fox' %}
+     class="current-menu-item"
+     {% endif %}
+     >
+   <a href="/the-fox">The Fox Inn</a>
+   <ul class="flist">
+    <li><a href="/the-fox">The Fox Inn</a></li>
+    <li><a href="https://www.thefoxatsouldern.co.uk">The Fox Inn Website</a></li>
+    <li><a href="https://www.facebook.com/thefoxinnsouldern/">(Facebook)</a></li>
+    <li><a href="/the-fox/aunt-sally">Aunt Sally</a></li>
+   </ul>
+  </li>
+  <li
+     {% if menu_item == 'recreational-areas' %}
+     class="current-menu-item"
+     {% endif %}
+     >
+   <a href="/recreational-areas">Recreation</a>
+   <ul class="flist">
+    <li><a href="/recreational-areas">Recreation</a></li>
+    <li><a href="/recreational-areas/footpaths">Footpaths</a></li>
+    <li><a href="/recreational-areas/nancy-bowles-wood">Nancy Bowles Wood</a></li>
+    <li><a href="/recreational-areas/the-pond">The Pond</a></li>
+    <li><a href="/recreational-areas/sports-field">Sports Field</a></li>
+    <li><a href="/recreational-areas/playground">Playground</a></li>
+    <li><a href="/recreational-areas/the-pound">The Pound</a></li>
+    <li><a href="/recreational-areas/the-green">The Green</a></li>
+   </ul>
+  </li>
+  <li
+     {% if menu_item == 'history' %}
+     class="current-menu-item"
+     {% endif %}
+     >
+     <a href="/history">History</a>
+  <ul class="flist">
+   <li><a href="/history">History</a></li>
+   <li><a href="/history/memorial-1914-1918">1914–1918</a></li>
+   <li><a href="/history/memorial-1939-1945">1939–1945</a></li>
+   <li><a href="/history/maps">Maps</a></li>
+   <li><a href="/history/transport">Transport</a></li>
+   <li><a href="/history/historic-houses">Historic Houses</a></li>
+   <li><a href="/history/places-of-worship">Places of Worship</a></li>
+   <li><a href="/history/listed">Listed Buildings</a></li>
+   <li><a href="/history/societies">Societies</a></li>
+   <li><a href="/history/souldern-in-literature">Souldern in Literature</a></li>
+   <li><a href="/history/oxfordshire-directories">Oxfordshire Directories</a></li>
+   <li><a href="/history/dryden-1845">Dryden Account of Souldern 1845</a></li>
+   <li><a href="/history/notes-on-souldern-1882">Notes on Souldern 1882</a></li>
+   <li><a href="/history/hist-and-desc-notices-1887">Hist. and Desc. Notices 1887</a></li>
+   <li><a href="/history/rev-robert-jones-1787-1835">Rev. Robert Jones 1787-1835</a></li>
+   <li><a href="/history/rev-lawrence-stephenson-1889">Rev. Lawrence Stephenson 1889</a></li>
+   <li><a href="/history/catholic-missions-1906">Catholic Missions 1906</a></li>
+   <li><a href="/history/sherwood-pevsner">Sherwood-Pevsner 1974</a></li>
+   <li><a href="/history/souldern-anglo-saxon-burials">Souldern Anglo-Saxon Burials</a></li>
+   <li><a href="/history/linger-a-while-1989">Linger A-While 1989</a></li>
+   <li><a href="https://issuu.com/tonytingle/docs/9780956510235_content">Coming In To Land 2010</a></li>
+   <li><a href="/history/self-portrait-1989">Self Portrait 1989</a></li>
+   <li><a href="/history/souldern-vision-2016">Souldern Vision 2016</a></li>
+   <li><a href="/history/souldern-online-history">Souldern Online History</a></li>
+  </ul>
+  </li>
+ </ul>
+</nav>
+

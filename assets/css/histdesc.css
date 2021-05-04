@@ -1,0 +1,17 @@
+
+nav.book {font-size:80%;text-indent:0em;text-align:center;background-color:rgb(222,237,237); }
+
+nav.book > a.prev {width:25%;text-align:left;float:left;white-space:nowrap;}
+
+nav.book > a.next {width:25%;text-align:right;float:right;white-space:nowrap;}
+
+nav.book > a.up  {}
+nav.book > div {clear:both;}
+
+div.main {text-indent:1em;text-align:justify;font-family:serif;font-size:110%;font-style:normal;margin-right:auto;margin-left:auto;max-width:30em;}
+
+div.main > h2 {text-indent:0em;text-align:center;color: black}
+div.main > h3 {text-indent:0em;text-align:center;color: black}
+
+div.main div.footnote {font-size:80%;border:solid thin black;margin-top:2em;margin-bottom:2em;padding:.5em .5em 0 .5em;}
+div.main div.ednote {font-size:80%;border:solid thin black;margin-top:2em;margin-bottom:2em;background-color:#eee;padding:.5em .5em 0 .5em;}

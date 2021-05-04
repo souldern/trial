@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+
+    {% if site.google_analytics %}
+      <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{{ site.google_analytics }}');
+      </script>
+    {% endif %}
+    <meta charset="UTF-8">
+
+{% seo %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet" type="text/css" href="/assets/css/menu.css" >
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1>
+      <h2 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h2>
+      <div style="max-width:35%; color:black; position:relative;top:-5px;left:60%">
+	<script>
+  (function() {
+    var cx = '012439869432470945129:cu9cowbnwgi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+	</script>
+	<div>
+      <gcse:search></gcse:search>
+      
+      {% if site.github.is_project_page %}
+        <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
+      {% endif %}
+      {% if site.show_downloads %}
+        <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
+        <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
+	{% endif %}
+	</div>
+	</div>
+    </header>
+
+    {% include topmenu.html %}
+
+
+ {% assign m-titles = "William Henry BATES, Harry BINDING, Sidney BLENCOWE, William James CALLOW, George Moore DAY, Arthur John LAKE, John Henry PAYNE, William Frederick ROBBINS, William Robert ROBBINS, Kenneth Sutherland RUDD, Frederick Henry SWEETMAN, William John SWEETMAN, Aubrey Ernest WESTBURY, Walter Thomas WESTBURY, William Henry WESTBURY, George CLEAVER, Arthur PARKER" | split: ", " %}
+
+{% assign m-pages = "william-henry-bates, harry-binding, sidney-blencowe, william-james-callow, george-moore-day, arthur-john-lake, john-henry-payne, william-frederick-robbins, william-robert-robbins, kenneth-sutherland-rudd, frederick-henry-sweetman, william-john-sweetman, aubrey-ernest-westbury, walter-thomas-westbury, william-henry-westbury, george-cleaver, arthur-parker" | split: ", " %}
+
+    {% assign next-title = "" %}
+    {% assign next-page = "" %}
+    {% assign prev-title = "" %}
+    {% assign prev-page = "" %}
+    
+    {% for thispage in m-titles %}
+    {% unless forloop.last %}
+    {% if page.title == thispage %}
+    {% assign next-title = m-titles[forloop.index ] %}
+    {% assign next-page = m-pages[forloop.index ] %}
+    {% endif %}
+    {% endunless %}
+    {% unless forloop.first %}
+    {% if page.title == thispage %}
+    {% assign prev-index = forloop.index | minus: 2 %}
+    {% assign prev-title = m-titles[ prev-index ] %}
+    {% assign prev-page = m-pages[ prev-index] %}
+    {% endif %}
+    {% endunless %}
+    {% endfor %}
+
+    
+<div style="clear:both"><br/></div>
+<div style="text-indent:0em;text-align:center;background-color:rgb(222,237,237)">
+<a href="/history/memorial-1914-1918/{{prev-page}}" style="width:25%;text-align:center;float:left">{{prev-title}}</a>
+<a href="/history/memorial-1914-1918/{{next-page}}" style="width:25%;text-align:center;float:right">{{next-title}}</a>
+<a href="/history/memorial-1914-1918">Memorial 1914–18</a>
+</div>
+
+    <main id="content" class="main-content" role="main">
+      {{ content }}
+
+
+    </main>
+<div style="clear:both"></div>
+<div style="text-indent:0em;text-align:center;background-color:rgb(222,237,237)">
+<a href="/history/memorial-1914-1918/{{prev-page}}" style="width:25%;text-align:center;float:left">{{prev-title}}</a>
+<a href="/history/memorial-1914-1918/{{next-page}}" style="width:25%;text-align:center;float:right">{{next-title}}</a>
+<a href="/history/memorial-1914-1918">Memorial 1914–18</a>
+</div>
+<div style="clear:both"><br/></div>
+
+</body>
+</html>

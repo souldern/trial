@@ -1,0 +1,11 @@
+exclude: ['README.md','tools']
+
+
+theme: jekyll-theme-cayman
+google_analytics: " "
+title: Souldern Village TRIAL
+description: Community Website for Souldern Village TRIAL
+
+
+
+
