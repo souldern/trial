@@ -10,10 +10,10 @@ https://codepen.io/philhoyt/pen/ujHzd
     display:inline
 }
 
-@media screen and (min-width: 57em) {
+@media screen and (min-width: .57em) {
 
 #collapsed-menu{
-    display:none
+//    display:none
 }
 
 #primary_nav_wrap
@@ -53,7 +53,7 @@ https://codepen.io/philhoyt/pen/ujHzd
     }
 }
 
-@media screen and (min-width: 63em) {
+@media screen and (min-width: 64em) {
     #primary_nav_wrap ul a{
 	font-size:12px;
 	padding:0 10px;
